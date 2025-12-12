@@ -39,9 +39,9 @@ class _OrderHistoryScreenState extends State<OrderHistoryScreen> {
   @override
   Widget build(BuildContext context) {
     if (_isLoading) {
-      return CommonScaffold(
+      return const CommonScaffold(
         title: 'Order History',
-        body: const Center(child: CircularProgressIndicator()),
+        body: Center(child: CircularProgressIndicator()),
       );
     }
 
