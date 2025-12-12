@@ -11,10 +11,10 @@ void dummyFunction() {}
 void main() {
   // Helper function to wrap widget with Provider
   Widget createTestWidget(Widget child) {
-    return MaterialApp(
-      home: ChangeNotifierProvider(
-        create: (_) => Cart(),
-        child: child,
+    return ChangeNotifierProvider(
+      create: (_) => Cart(),
+      child: MaterialApp(
+        home: child,
       ),
     );
   }

@@ -7,10 +7,10 @@ import 'package:sandwich_shop/views/profile_screen.dart';
 void main() {
   // Helper function to wrap widget with Provider
   Widget createTestWidget(Widget child) {
-    return MaterialApp(
-      home: ChangeNotifierProvider(
-        create: (_) => Cart(),
-        child: child,
+    return ChangeNotifierProvider(
+      create: (_) => Cart(),
+      child: MaterialApp(
+        home: child,
       ),
     );
   }
@@ -119,23 +119,26 @@ void main() {
         (WidgetTester tester) async {
       Map<String, String>? result;
       const ProfileScreen profileScreen = ProfileScreen();
-      final MaterialApp app = MaterialApp(
-        home: Builder(
-          builder: (BuildContext context) {
-            return Scaffold(
-              body: ElevatedButton(
-                onPressed: () async {
-                  result = await Navigator.push<Map<String, String>>(
-                    context,
-                    MaterialPageRoute<Map<String, String>>(
-                      builder: (BuildContext context) => profileScreen,
-                    ),
-                  );
-                },
-                child: const Text('Go to Profile'),
-              ),
-            );
-          },
+      final app = ChangeNotifierProvider(
+        create: (_) => Cart(),
+        child: MaterialApp(
+          home: Builder(
+            builder: (BuildContext context) {
+              return Scaffold(
+                body: ElevatedButton(
+                  onPressed: () async {
+                    result = await Navigator.push<Map<String, String>>(
+                      context,
+                      MaterialPageRoute<Map<String, String>>(
+                        builder: (BuildContext context) => profileScreen,
+                      ),
+                    );
+                  },
+                  child: const Text('Go to Profile'),
+                ),
+              );
+            },
+          ),
         ),
       );
 
@@ -163,23 +166,26 @@ void main() {
         (WidgetTester tester) async {
       Map<String, String>? result;
       const ProfileScreen profileScreen = ProfileScreen();
-      final MaterialApp app = MaterialApp(
-        home: Builder(
-          builder: (BuildContext context) {
-            return Scaffold(
-              body: ElevatedButton(
-                onPressed: () async {
-                  result = await Navigator.push<Map<String, String>>(
-                    context,
-                    MaterialPageRoute<Map<String, String>>(
-                      builder: (BuildContext context) => profileScreen,
-                    ),
-                  );
-                },
-                child: const Text('Go to Profile'),
-              ),
-            );
-          },
+      final app = ChangeNotifierProvider(
+        create: (_) => Cart(),
+        child: MaterialApp(
+          home: Builder(
+            builder: (BuildContext context) {
+              return Scaffold(
+                body: ElevatedButton(
+                  onPressed: () async {
+                    result = await Navigator.push<Map<String, String>>(
+                      context,
+                      MaterialPageRoute<Map<String, String>>(
+                        builder: (BuildContext context) => profileScreen,
+                      ),
+                    );
+                  },
+                  child: const Text('Go to Profile'),
+                ),
+              );
+            },
+          ),
         ),
       );
 
@@ -242,23 +248,26 @@ void main() {
         (WidgetTester tester) async {
       Map<String, String>? result;
       const ProfileScreen profileScreen = ProfileScreen();
-      final MaterialApp app = MaterialApp(
-        home: Builder(
-          builder: (BuildContext context) {
-            return Scaffold(
-              body: ElevatedButton(
-                onPressed: () async {
-                  result = await Navigator.push<Map<String, String>>(
-                    context,
-                    MaterialPageRoute<Map<String, String>>(
-                      builder: (BuildContext context) => profileScreen,
-                    ),
-                  );
-                },
-                child: const Text('Go to Profile'),
-              ),
-            );
-          },
+      final app = ChangeNotifierProvider(
+        create: (_) => Cart(),
+        child: MaterialApp(
+          home: Builder(
+            builder: (BuildContext context) {
+              return Scaffold(
+                body: ElevatedButton(
+                  onPressed: () async {
+                    result = await Navigator.push<Map<String, String>>(
+                      context,
+                      MaterialPageRoute<Map<String, String>>(
+                        builder: (BuildContext context) => profileScreen,
+                      ),
+                    );
+                  },
+                  child: const Text('Go to Profile'),
+                ),
+              );
+            },
+          ),
         ),
       );
 
