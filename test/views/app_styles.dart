@@ -20,14 +20,14 @@ class AppStyles {
   static TextStyle get normalText => TextStyle(fontSize: _baseFontSize);
 
   static TextStyle get heading1 => TextStyle(
-    fontSize: _baseFontSize + 8,
-    fontWeight: FontWeight.bold,
-  );
+        fontSize: _baseFontSize + 8,
+        fontWeight: FontWeight.bold,
+      );
 
   static TextStyle get heading2 => TextStyle(
-    fontSize: _baseFontSize + 4,
-    fontWeight: FontWeight.bold,
-  );
+        fontSize: _baseFontSize + 4,
+        fontWeight: FontWeight.bold,
+      );
 }
 
 TextStyle get normalText => AppStyles.normalText;
